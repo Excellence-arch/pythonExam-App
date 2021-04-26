@@ -55,11 +55,12 @@ def reg():
 	for k in range(n):
 		fulname = input("Enter your full name > ")
 		clas = input("What class are you > ")
-		adres = input("Where do you leave > ")
+		adres = input("Where do you live > ")
 		myquery = "INSERT INTO students(Fullname, Class, address) VALUES(%s, %s, %s)"
 		val = (fulname, clas, adres)
 		mycursor.execute(myquery, val)
 		mycon.commit()
+		print(fulname + ' registered successfully')
 
 main()
 
